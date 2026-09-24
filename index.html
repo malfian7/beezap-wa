@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BeeZap – WhatsApp Business API Official Partner</title>
+<meta name="description" content="WhatsApp Business API resmi untuk broadcast, chatbot, OTP, dan customer service. Request demo gratis.">
+<meta name="theme-color" content="#15803D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BeeZap – WhatsApp Business API Official Partner">
+<meta property="og:description" content="Aplikasi WhatsApp API yang stabil untuk notifikasi, promosi, autentikasi, billing, dan customer service.">
+<meta property="og:image" content="assets/img/dashboard.webp">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============ SVG sprite ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 32 32"><rect x="1" y="1" width="30" height="30" rx="9" fill="#22C55E"/><path d="M9 9.5h14a2 2 0 0 1 2 2v8.2a2 2 0 0 1-2 2h-8.4L10 25v-3.3H9a2 2 0 0 1-2-2v-8.2a2 2 0 0 1 2-2Z" fill="#fff"/></symbol>
+  <symbol id="i-bubble" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="#fff"/><circle cx="8.3" cy="12" r="1.3" fill="#1C9F48"/><circle cx="12" cy="12" r="1.3" fill="#1C9F48"/><circle cx="15.7" cy="12" r="1.3" fill="#1C9F48"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13h6l-1 8 8-10h-6l1-8Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v2"/></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 9M20 4v5h-5M20 12a8 8 0 0 1-13.7 5.6L4 15M4 20v-5h5"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M15 8h-1.5A2.5 2.5 0 0 0 11 10.5V20M9 13h5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m10 13 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13.5h.01M15 13.5h.01M9.5 17h5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4a1 1 0 0 0 1 1h2l7 4V5L7 9H5a1 1 0 0 0-1 1Z"/><path d="M18 9a4 4 0 0 1 0 6"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 7.5V18l-4 2v-7.5L4 5Z"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4V7Z"/><path d="M14 7v2M14 11v2M14 15v2"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 16v-4M10 16V8M14 16v-6M18 16V5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-dcheck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 13 4 4 8-9M10 16l1 1 9-10"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.5 2.5 2.5 4.5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="BeeZap — kembali ke atas"><img src="assets/img/logo-dark-text.png" width="424" height="114" alt="BeeZap"></a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#kenapa">Kenapa BeeZap</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#use-case">Use Case</a>
+      <a href="#cara-mulai">Cara Mulai</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right"><a class="nav-login" href="https://wa.me/628111568477" target="_blank" rel="noopener">Chat WhatsApp</a><a class="btn btn-black nav-cta" href="#kontak">Coba Demo Gratis <svg><use href="#i-arrow"/></svg></a></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#kenapa">Kenapa BeeZap</a><a href="#fitur">Fitur</a><a href="#use-case">Use Case</a><a href="#cara-mulai">Cara Mulai</a><a href="#faq">FAQ</a>
+    <a href="https://wa.me/628111568477" target="_blank" rel="noopener">Chat WhatsApp</a>
+    <a class="btn btn-black" href="#kontak">Coba Demo Gratis <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="badge"><svg><use href="#i-spark"/></svg>WhatsApp Business API Resmi · Official Partner</span>
+    <h1>Semakin dekat dengan pelanggan bersama <span class="hl">BeeZap</span></h1>
+    <p class="lead">WhatsApp Business API resmi untuk broadcast, notifikasi, OTP, dan customer service dalam satu dashboard — supaya pesan Anda <b style="color:var(--ink-2);font-weight:600">dibaca, dibalas, dan berujung transaksi.</b></p>
+    <div class="hero-ctas">
+      <a class="btn btn-green" href="#kontak">Coba Demo Gratis <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-soft" href="https://wa.me/628111568477" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Chat via WhatsApp</a>
+    </div>
+    <div class="micro">
+      <span><svg><use href="#i-check"/></svg>Official API Meta</span>
+      <span><svg><use href="#i-check"/></svg>Free training</span>
+      <span><svg><use href="#i-check"/></svg>Support sampai go-live</span>
+    </div>
+  </div>
+  <div class="hero-guides" aria-hidden="true"></div>
+  <p class="clients-label">Dipercaya oleh bisnis di berbagai industri</p>
+  <div class="clients">
+    <div class="wrap">
+      <div class="client-row">
+        <div class="client"><img class="client-logo" src="https://beezap.id/assets/img/clients/fif-group.webp" alt="FIF Group" loading="lazy" decoding="async"><span class="client-name" hidden>FIF Group</span></div>
+        <div class="client"><img class="client-logo" src="https://beezap.id/assets/img/clients/indomobil.webp" alt="Indomobil" loading="lazy" decoding="async"><span class="client-name" hidden>Indomobil</span></div>
+        <div class="client"><img class="client-logo" src="https://beezap.id/assets/img/clients/sim-group.webp" alt="SIM Group" loading="lazy" decoding="async"><span class="client-name" hidden>SIM Group</span></div>
+        <div class="client"><img class="client-logo" src="https://beezap.id/assets/img/clients/kiss.webp" alt="KISS" loading="lazy" decoding="async"><span class="client-name" hidden>KISS</span></div>
+        <div class="client"><img class="client-logo" src="https://beezap.id/assets/img/clients/sehati-syariah.webp" alt="Sehati Syariah" loading="lazy" decoding="async"><span class="client-name" hidden>Sehati Syariah</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD SHOWCASE ============ -->
+<section class="showcase" id="product" aria-label="Tampilan dashboard BeeZap">
+  <div class="wrap">
+    <img class="dash-shot" id="dashShot" src="assets/img/dashboard.webp" width="2240" height="1248" alt="Dashboard BeeZap: Total Blast 1200, Blast Success 1823, Contact Responded 206, grafik Daily Blast Statistics, dan tabel Monitoring per agen">
+  </div>
+</section>
+
+<!-- ============ KENAPA BEEZAP ============ -->
+<section class="sec" id="kenapa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stack"><span class="badge"><svg><use href="#i-spark"/></svg>Kenapa BeeZap</span><h2>Kanal WhatsApp resmi yang siap dipakai skala bisnis</h2></div>
+      <p>Bukan aplikasi blast biasa. BeeZap terhubung langsung ke WhatsApp Business Platform, jadi nomor bisnis Anda aman dan pesan tampil dengan nama perusahaan.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><span class="ic"><svg><use href="#i-verified"/></svg></span><h3>Official API</h3><p>Terhubung langsung ke WhatsApp Business Platform. Nama bisnis tampil jelas, nomor aman dari blokir.</p></div>
+      <div class="why-item"><span class="ic"><svg><use href="#i-bolt"/></svg></span><h3>Stabil &amp; scalable</h3><p>Ribuan pesan dan chat berjalan bersamaan, tanpa HP yang harus selalu menyala.</p></div>
+      <div class="why-item"><span class="ic"><svg><use href="#i-plug"/></svg></span><h3>Easy integration</h3><p>Hubungkan ke CRM, core system, atau aplikasi internal Anda.</p></div>
+      <div class="why-item"><span class="ic"><svg><use href="#i-lock"/></svg></span><h3>Data aman</h3><p>Dikembangkan perusahaan IT berpengalaman lebih dari 10 tahun.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section class="sec" id="use-case">
+  <div class="wrap usecase">
+    <div class="phone-scene" id="phoneScene">
+      <div class="clip"><img class="base" src="assets/img/phone.webp" width="672" height="688" alt="Percakapan pelanggan dengan akun bisnis BeeZap di WhatsApp" loading="lazy"></div>
+      <div class="wa w1" data-fx="right" style="left:63%;top:15.5%;width:27.7%"><img src="assets/img/wa-tilt.webp" width="356" height="323" alt="" aria-hidden="true"></div>
+      <div class="wa w2" data-fx="left" style="left:9.6%;top:46%;width:24.4%"><img src="assets/img/wa-front.webp" width="313" height="380" alt="" aria-hidden="true"></div>
+    </div>
+    <div class="stack">
+      <span class="badge"><svg><use href="#i-spark"/></svg>Use Case</span>
+      <h2 class="h2"><span class="hl">BeeZap</span> untuk segala aktivitas bisnis Anda</h2>
+      <p style="color:var(--muted)">Satu nomor WhatsApp resmi untuk semua kebutuhan komunikasi — tanpa gonta-ganti aplikasi, tanpa takut nomor diblokir.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><div><b>Notifikasi</b><span>Status pesanan &amp; pengiriman terkirim otomatis.</span></div></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><div><b>Promo</b><span>Broadcast promo ke ribuan kontak dalam sekali klik.</span></div></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><div><b>OTP</b><span>OTP aman lewat aplikasi yang pasti dibuka pelanggan.</span></div></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><div><b>Billing reminder</b><span>Pengingat tagihan agar pembayaran masuk tepat waktu.</span></div></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><div><b>Customer service</b><span>Satu inbox bersama untuk seluruh tim CS Anda.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFIT CARDS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stack"><span class="badge"><svg><use href="#i-spark"/></svg>BeeZap WA API</span><h2>Tetap terhubung dengan pelanggan Anda</h2></div>
+      <p>Komunikasi yang teratur dan efektif membuat pelanggan merasa diperhatikan — dan pelanggan yang diperhatikan akan kembali membeli.</p>
+    </div>
+    <div class="cards">
+      <article>
+        <div class="card-art"><div class="art">
+          <svg viewBox="0 0 200 170" aria-hidden="true">
+            <rect x="62" y="14" width="76" height="150" rx="14" fill="#1B1F1D"/><rect x="67" y="20" width="66" height="138" rx="10" fill="#fff"/>
+            <rect x="75" y="32" width="50" height="8" rx="4" fill="#E4F2E9"/>
+            <circle cx="100" cy="86" r="26" fill="#22C55E"/><circle cx="100" cy="86" r="34" fill="none" stroke="#22C55E" stroke-opacity=".25" stroke-width="6"/>
+            <path d="M88 86l8 8 16-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="78" y="128" width="44" height="7" rx="3.5" fill="#D6F5E1"/><rect x="84" y="140" width="32" height="6" rx="3" fill="#EDF0EE"/>
+            <g transform="translate(140 36)"><rect width="48" height="22" rx="11" fill="#fff" stroke="#D6F5E1"/><circle cx="12" cy="11" r="6" fill="#22C55E"/><path d="M9 11l2 2 4-4" stroke="#fff" stroke-width="1.8" fill="none"/><rect x="22" y="8" width="20" height="6" rx="3" fill="#C7D2CB"/></g>
+          </svg>
+        </div></div>
+        <div class="card-body"><h3>Verified</h3><p>Tingkatkan kepercayaan pelanggan dengan akun bisnis resmi bercentang hijau.</p></div>
+      </article>
+      <article>
+        <div class="card-art"><div class="art">
+          <svg viewBox="0 0 200 170" aria-hidden="true">
+            <g stroke="#9ADBB2" stroke-width="2" stroke-dasharray="4 4"><path d="M100 85 36 34M100 85l66-50M100 85 30 130M100 85l70 44M100 85V20"/></g>
+            <circle cx="100" cy="85" r="30" fill="#22C55E"/><use href="#i-bubble" x="82" y="67" width="36" height="36"/>
+            <g fill="#fff" stroke="#BFE8CE" stroke-width="2"><circle cx="36" cy="34" r="14"/><circle cx="166" cy="35" r="14"/><circle cx="30" cy="130" r="14"/><circle cx="170" cy="129" r="14"/><circle cx="100" cy="20" r="12"/></g>
+            <g fill="#15803D"><circle cx="36" cy="30" r="4"/><circle cx="166" cy="31" r="4"/><circle cx="30" cy="126" r="4"/><circle cx="170" cy="125" r="4"/><circle cx="100" cy="17" r="3.5"/></g>
+            <g fill="#15803D"><path d="M28 42a8 8 0 0 1 16 0z"/><path d="M158 43a8 8 0 0 1 16 0z"/><path d="M22 138a8 8 0 0 1 16 0z"/><path d="M162 137a8 8 0 0 1 16 0z"/><path d="M93 27a7 7 0 0 1 14 0z"/></g>
+          </svg>
+        </div></div>
+        <div class="card-body"><h3>Business Reach</h3><p>Jangkau ribuan pelanggan sekaligus di aplikasi chat yang mereka buka setiap hari.</p></div>
+      </article>
+      <article>
+        <div class="card-art"><div class="art">
+          <svg viewBox="0 0 200 170" aria-hidden="true">
+            <rect x="12" y="18" width="70" height="30" rx="8" fill="#fff" stroke="#BFE8CE" stroke-width="2"/><text x="47" y="37" text-anchor="middle" font-size="10" font-weight="700" fill="#15803D" font-family="Plus Jakarta Sans, sans-serif">Pesan masuk</text>
+            <path d="M47 48v20" stroke="#22C55E" stroke-width="2.5"/>
+            <rect x="12" y="68" width="70" height="30" rx="8" fill="#22C55E"/><text x="47" y="87" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Plus Jakarta Sans, sans-serif">Chatbot</text>
+            <path d="M82 83h24M106 83V40h10M106 83v44h10" fill="none" stroke="#22C55E" stroke-width="2.5"/>
+            <rect x="116" y="26" width="72" height="28" rx="8" fill="#fff" stroke="#BFE8CE" stroke-width="2"/><text x="152" y="44" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">Jawab FAQ</text>
+            <rect x="116" y="113" width="72" height="28" rx="8" fill="#fff" stroke="#BFE8CE" stroke-width="2"/><text x="152" y="131" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">Ke agen CS</text>
+            <rect x="12" y="118" width="70" height="30" rx="8" fill="#fff" stroke="#BFE8CE" stroke-width="2"/><text x="47" y="137" text-anchor="middle" font-size="9.5" font-weight="600" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">24/7 aktif</text>
+            <path d="M47 98v20" stroke="#22C55E" stroke-width="2.5" stroke-dasharray="3 3"/>
+          </svg>
+        </div></div>
+        <div class="card-body"><h3>Message Automation</h3><p>Balas pertanyaan umum otomatis 24/7 — tim Anda fokus ke chat yang siap closing.</p></div>
+      </article>
+      <article>
+        <div class="card-art"><div class="art">
+          <svg viewBox="0 0 200 170" aria-hidden="true">
+            <rect x="20" y="16" width="160" height="140" rx="12" fill="#fff" stroke="#D6F5E1" stroke-width="2"/>
+            <text x="34" y="40" font-size="10" font-weight="700" fill="#141A1F" font-family="Plus Jakarta Sans, sans-serif">Template pesan</text>
+            <rect x="34" y="52" width="132" height="62" rx="9" fill="#D9FDD3"/>
+            <text x="44" y="70" font-size="9.5" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">Halo</text>
+            <rect x="66" y="61" width="44" height="13" rx="6.5" fill="#22C55E"/><text x="88" y="71" text-anchor="middle" font-size="8.5" font-weight="700" fill="#fff" font-family="Plus Jakarta Sans, sans-serif">{nama}</text>
+            <text x="44" y="88" font-size="9.5" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">tagihan Anda</text>
+            <rect x="106" y="79" width="50" height="13" rx="6.5" fill="#22C55E"/><text x="131" y="89" text-anchor="middle" font-size="8.5" font-weight="700" fill="#fff" font-family="Plus Jakarta Sans, sans-serif">{jumlah}</text>
+            <text x="44" y="105" font-size="9.5" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">jatuh tempo besok.</text>
+            <rect x="30" y="126" width="72" height="18" rx="6" fill="#141A1F"/><text x="66" y="138" text-anchor="middle" font-size="8.5" font-weight="600" fill="#fff" font-family="Plus Jakarta Sans, sans-serif">Bayar sekarang</text>
+            <rect x="102" y="126" width="64" height="18" rx="6" fill="#EDF0EE"/><text x="134" y="138" text-anchor="middle" font-size="8.5" font-weight="600" fill="#3A444C" font-family="Plus Jakarta Sans, sans-serif">Tanya CS</text>
+          </svg>
+        </div></div>
+        <div class="card-body"><h3>Personalize Message</h3><p>Sapa setiap pelanggan dengan nama &amp; datanya sendiri — terasa personal, bukan spam.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DARK FEATURES ============ -->
+<section class="dark" id="fitur">
+  <div class="wrap"><div class="inner">
+    <h2>Jangkau Pelanggan Anda dengan Fitur Lengkap dari <span class="hl">BeeZap</span></h2>
+    <p class="sub">12 fitur dalam tiga kebutuhan utama bisnis: marketing, service, dan growth.</p>
+    <div class="cat-grid">
+      <div class="cat"><div class="cat-head"><b>Marketing</b><span>Jangkau lebih banyak pelanggan dengan pesan yang tepat.</span></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-mega"/></svg></div><div><h3>Broadcast</h3><p>Kirim promo ke ribuan kontak dalam satu waktu.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-cal"/></svg></div><div><h3>Scheduling</h3><p>Jadwalkan pesan di jam terbaik pelanggan membuka HP.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-user"/></svg></div><div><h3>Personalized message</h3><p>Sisipkan nama dan data pelanggan ke template secara otomatis.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-loop"/></svg></div><div><h3>Message automation</h3><p>Alur pesan berjalan otomatis berdasarkan pemicu yang Anda atur.</p></div></div>
+      </div>
+      <div class="cat"><div class="cat-head"><b>Service</b><span>Layani setiap chat masuk dengan cepat dan rapi.</span></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-bot"/></svg></div><div><h3>Chatbot</h3><p>Auto-reply interaktif via API — pelanggan dijawab dalam hitungan detik.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-ticket"/></svg></div><div><h3>Ticketing</h3><p>Setiap keluhan tercatat sebagai tiket, tidak ada chat yang terlewat.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-pulse"/></svg></div><div><h3>Real-time monitoring</h3><p>Pantau aktivitas agen dan percakapan saat itu juga.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-filter"/></svg></div><div><h3>Filter</h3><p>Saring nomor aktif sebelum broadcast, agar biaya kirim tidak terbuang.</p></div></div>
+      </div>
+      <div class="cat"><div class="cat-head"><b>Growth</b><span>Ukur hasil dan perkuat kepercayaan pada brand Anda.</span></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-dcheck"/></svg></div><div><h3>Delivered &amp; read report</h3><p>Ketahui pasti pesan diterima dan dibaca per kampanye.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-plug"/></svg></div><div><h3>API integration</h3><p>Hubungkan ke CRM, core system, atau aplikasi internal.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-verified"/></svg></div><div><h3>Verified account</h3><p>Akun bisnis resmi yang menampilkan nama perusahaan Anda.</p></div></div>
+        <div class="feat"><div class="ic"><svg><use href="#i-globe"/></svg></div><div><h3>Business reach</h3><p>Temui pelanggan di aplikasi chat yang mereka buka setiap hari.</p></div></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <span class="eyebrow"><i></i>Demo gratis — jadwalkan minggu ini</span>
+        <h2>Semakin dekat dengan pelanggan</h2>
+        <p>Setiap hari tanpa kanal WhatsApp resmi adalah pesan yang tak terbaca dan pelanggan yang beralih. Mulai dengan demo gratis — training dan pendampingan kami berikan sampai go-live.</p>
+        <div class="row">
+          <a class="btn btn-black" href="#kontak">Coba Sekarang <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-white" href="https://wa.me/628111568477" target="_blank" rel="noopener">Chat via WhatsApp</a>
+        </div>
+      </div>
+      <div class="cta-art" id="ctaArt" aria-hidden="true">
+        <img class="banner-phone" src="assets/img/banner-phone.webp" width="600" height="400" alt="">
+        <div class="wa w1" data-fx="cta1" style="left:2.17%;top:6.5%;width:20.5%"><img src="assets/img/bubble-l.webp" alt=""></div>
+        <div class="wa w2" data-fx="cta2" style="left:74.5%;top:10%;width:23.33%"><img src="assets/img/bubble-r.webp" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BERSAMA BEEZAP ============ -->
+<section class="sec">
+  <div class="wrap together">
+    <div class="stack">
+      <span class="badge"><svg><use href="#i-spark"/></svg>BeeZap WA API</span>
+      <h2 class="h2">Bersama BeeZap</h2>
+      <p style="color:var(--muted)">Cara termudah menjalankan komunikasi bisnis — dari kirim massal sampai layanan pelanggan.</p>
+      <div class="perks">
+        <div class="perk"><span class="ic"><svg><use href="#i-send"/></svg></span><div><b>Kirim pesan ke konsumen secara massal</b><span>Satu kampanye, ribuan penerima, laporan lengkap.</span></div></div>
+        <div class="perk"><span class="ic"><svg><use href="#i-heart"/></svg></span><div><b>Maksimalkan layanan pelanggan lewat inbound</b><span>Chat masuk terdistribusi rapi ke tim, respons lebih cepat.</span></div></div>
+      </div>
+    </div>
+    <div class="panel" aria-hidden="true">
+      <svg viewBox="0 0 320 266" width="100%" height="100%" style="position:absolute;inset:0">
+        <g opacity=".18" fill="#fff"><rect x="30" y="20" width="60" height="110" rx="6"/><rect x="100" y="20" width="60" height="110" rx="6"/><rect x="170" y="20" width="60" height="110" rx="6"/><rect x="240" y="20" width="60" height="110" rx="6"/></g>
+        <g fill="#1F8F45" opacity=".55"><path d="M40 266c10-60 30-80 50-90-10 30-20 60-20 90z"/><path d="M60 266c0-50 20-70 45-80-15 25-20 55-18 80z"/></g>
+        <rect x="104" y="58" width="104" height="196" rx="16" fill="#1B1F1D"/><rect x="110" y="64" width="92" height="184" rx="12" fill="#2BB463"/>
+        <circle cx="156" cy="112" r="30" fill="#fff"/><use href="#i-bubble" x="132" y="88" width="48" height="48" style="filter:invert(0)"/>
+        <rect x="122" y="158" width="68" height="8" rx="4" fill="#fff" opacity=".9"/><rect x="130" y="172" width="52" height="6" rx="3" fill="#fff" opacity=".6"/>
+        <rect x="122" y="192" width="30" height="40" rx="5" fill="#fff" opacity=".85"/><rect x="160" y="192" width="30" height="40" rx="5" fill="#fff" opacity=".85"/>
+        <path d="M126 222l6-10 6 6 8-14" stroke="#22C55E" stroke-width="2.5" fill="none"/><path d="M164 224l6-6 6 4 8-12" stroke="#22C55E" stroke-width="2.5" fill="none"/>
+      </svg>
+      <div style="position:absolute;right:7%;top:24%;background:#fff;border-radius:12px;padding:10px 12px;font-size:12px;box-shadow:0 14px 30px -14px rgba(0,40,10,.6)" class="float"><div style="color:var(--muted);font-size:10.5px">Kampanye promo</div><b style="font-size:15px;font-variant-numeric:tabular-nums">1.290 terkirim</b></div>
+      <div style="position:absolute;left:6%;bottom:18%;background:#fff;border-radius:12px;padding:10px 12px;font-size:12px;box-shadow:0 14px 30px -14px rgba(0,40,10,.6);display:flex;gap:8px;align-items:center" class="float d2"><span style="width:26px;height:26px;border-radius:50%;background:var(--green);display:grid;place-items:center"><svg width="13" height="13" style="color:#fff"><use href="#i-dcheck"/></svg></span><div><div style="color:var(--muted);font-size:10.5px">Dibaca</div><b style="font-variant-numeric:tabular-nums">1.023 pelanggan</b></div></div>
+      <div class="bubble3d float" style="right:5%;top:4%;width:13%"><svg><use href="#i-bubble"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARA MULAI ============ -->
+<section class="sec" id="cara-mulai">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="stack"><span class="badge"><svg><use href="#i-spark"/></svg>Cara Mulai</span><h2>Empat langkah menuju WhatsApp Business API resmi</h2></div>
+      <p>Tim kami mendampingi dari konsultasi pertama sampai kampanye pertama Anda berjalan.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Konsultasi &amp; demo</h3><p>Ceritakan kebutuhan Anda, kami tunjukkan alurnya langsung di dashboard.</p></li>
+      <li class="step"><h3>Siapkan dokumen</h3><p>Facebook Business Manager, website &amp; email domain, NPWP, dan Surat Izin Usaha.</p></li>
+      <li class="step"><h3>Registrasi WABA</h3><p>Kami bantu proses pendaftaran WhatsApp Business API Anda ke Meta.</p></li>
+      <li class="step"><h3>Training &amp; go-live</h3><p>Tim Anda dilatih sampai siap, lalu pesan pertama dikirim.</p></li>
+    </ol>
+    <div class="timeline-note">
+      <p><svg><use href="#i-clock"/></svg>Maksimal 8 minggu jika sudah punya Facebook Business Manager.</p>
+      <a class="btn btn-green" href="#kontak">Mulai dari langkah 1 <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <span class="badge"><svg><use href="#i-chat"/></svg>FAQs</span>
+      <h2 class="h2">Masih Ada Pertanyaan?</h2>
+      <p>Kami sudah siapkan jawabannya untuk Anda.</p>
+    </div>
+    <div class="faq-grid" id="faqGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact" id="kontak">
+  <div class="wrap contact-grid">
+    <div class="stack">
+      <span class="badge"><svg><use href="#i-phone"/></svg>Contact Us</span>
+      <h2>Kamu tertarik?<br><span class="hl">BeeZap</span> Solusi untuk bisnismu</h2>
+      <p class="muted">Hubungi admin kami atau isi formulir untuk mengajukan demo gratis.</p>
+      <div class="channels">
+        <a class="channel" href="mailto:marketing@pkp.co.id"><span class="ic"><svg><use href="#i-mail"/></svg></span><div><small>Kirim email kepada kami di</small><strong>marketing@pkp.co.id</strong></div><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="channel" href="tel:+622184311636"><span class="ic"><svg><use href="#i-phone"/></svg></span><div><small>Atau hubungi kantor kami</small><strong>(021) 8431 1636</strong></div><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+        <a class="channel" href="https://wa.me/628111568477" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-chat"/></svg></span><div><small>Chat WhatsApp Support</small><strong>0811-1568-477</strong></div><span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+    <form class="form" id="demoForm" novalidate>
+      <h3>Request demo gratis</h3>
+      <p class="note">Data Anda hanya kami gunakan untuk memproses pengajuan demo.</p>
+      <div class="two">
+        <div class="field"><label for="f-nama">Nama lengkap</label><input id="f-nama" aria-describedby="f-nama-err" name="nama" autocomplete="name" placeholder="Cth. Rina Wulandari" required><span class="err" id="f-nama-err" hidden></span></div>
+        <div class="field"><label for="f-perusahaan">Nama perusahaan</label><input id="f-perusahaan" aria-describedby="f-perusahaan-err" name="perusahaan" autocomplete="organization" placeholder="Cth. PT ABC Indonesia" required><span class="err" id="f-perusahaan-err" hidden></span></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-email">Email kantor</label><input id="f-email" aria-describedby="f-email-err" name="email" type="email" autocomplete="email" placeholder="Cth. nama@perusahaan.co.id" required><span class="err" id="f-email-err" hidden></span></div>
+        <div class="field"><label for="f-hp">No. WhatsApp</label><input id="f-hp" aria-describedby="f-hp-err" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="Cth. 0812xxxxxxx" required><span class="err" id="f-hp-err" hidden></span></div>
+      </div>
+      <div class="field"><label for="f-kebutuhan">Kebutuhan utama</label>
+        <select id="f-kebutuhan" name="kebutuhan" aria-describedby="f-kebutuhan-err" required>
+          <option value="">Pilih kebutuhan</option>
+          <option>Notifikasi &amp; billing reminder</option><option>Broadcast promo</option><option>OTP</option><option>Customer service &amp; chatbot</option><option>Registrasi WABA</option><option>Lainnya</option>
+        </select><span class="err" id="f-kebutuhan-err" hidden></span></div>
+      <div class="field"><label for="f-tanya">Pesan <span class="opt">(opsional)</span></label><textarea id="f-tanya" name="pesan" placeholder="Ceritakan singkat kebutuhan atau pertanyaan Anda"></textarea></div>
+      <button class="btn btn-green" type="submit" id="submitBtn">Request Demo Gratis <svg><use href="#i-arrow"/></svg></button>
+      <div class="form-msg" id="formMsg" role="status" hidden></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<div class="sticky-cta" id="stickyCta" aria-hidden="true"><a class="btn btn-soft" href="https://wa.me/628111568477" target="_blank" rel="noopener" tabindex="-1">Chat WA</a><a class="btn btn-green" href="#kontak" tabindex="-1">Coba Demo Gratis</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <span class="logo logo-foot"><img src="assets/img/logo-light-text.png" width="424" height="114" alt="BeeZap"></span>
+      <p>Kami adalah perusahaan IT penyedia aplikasi yang sudah berjalan lebih dari 10 tahun. Kami pastikan data-data dan klien kami aman dan terjaga dengan baik.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/PT.PrawathiyaKarsaPradiptha" target="_blank" rel="noopener" aria-label="Facebook PT. Prawathiya Karsa Pradiptha"><svg><use href="#i-fb"/></svg></a>
+        <a href="https://www.instagram.com/beyondtechid" target="_blank" rel="noopener" aria-label="Instagram beyondtechid"><svg><use href="#i-cam"/></svg></a>
+        <a href="https://wa.me/628111568477" target="_blank" rel="noopener" aria-label="WhatsApp BeeZap"><svg><use href="#i-chat"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Alamat</h4>
+      <p style="margin-top:0">Kawasan Niaga Citra Gran Blok R7 No. 32, Jl. Alternatif Transyogie, Cibubur 17433</p>
+      <h4 style="margin-top:22px">Kontak</h4>
+      <div class="foot-links"><a href="tel:+622184311636">(021) 8431 1636</a><a href="mailto:marketing@pkp.co.id">marketing@pkp.co.id</a><a href="https://wa.me/628111568477" target="_blank" rel="noopener">WhatsApp 0811-1568-477</a></div>
+      <p class="disclaimer">WhatsApp merupakan merek dagang milik WhatsApp LLC / Meta Platforms, Inc.</p>
+    </div>
+  </div>
+  <div class="copyright">© 2026 PT. Prawathiya Karsa Pradiptha. Hak cipta dilindungi.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
