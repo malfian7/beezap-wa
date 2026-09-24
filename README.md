@@ -12,17 +12,6 @@ assets/img/         Gambar, logo, favicon
 .nojekyll           Agar GitHub Pages tidak memproses file dengan Jekyll
 ```
 
-## Deploy ke GitHub Pages
-
-1. Buat repository baru di GitHub, lalu upload **isi** folder ini (bukan foldernya) ke branch `main`.
-2. Buka **Settings → Pages**.
-3. Di **Build and deployment**, pilih **Deploy from a branch**, branch `main`, folder `/ (root)`, lalu **Save**.
-4. Tunggu 1–2 menit. Situs tersedia di `https://<username>.github.io/<nama-repo>/`.
-
-## Deploy ke Vercel atau Netlify
-
-Import repository-nya, pilih framework **Other / None**, kosongkan build command, dan output directory `.` (root).
-
 ## Catatan
 
 - Semua path relatif, jadi aman dipasang di subfolder (misalnya GitHub Pages `/<nama-repo>/`).
